@@ -31,32 +31,36 @@ public class EmployeeWage
 			System.out.println(" ");
 		}
 	}
-	
-	public static void main(String[] args) 
+	public void limitations()
 	{
-		EmployeeWage obj1=new EmployeeWage();
-		while((obj1.totalWorkingHrs<=MAX_WORKING_HOURS) && (obj1.totalWorkingDays<=MAX_WORKING_DAYS))
+		while((totalWorkingHrs<=MAX_WORKING_HOURS) && (totalWorkingDays<=MAX_WORKING_DAYS))
 		{
 			
-			obj1.empCheck =(int) ((Math.random())*10)%3;
-			switch(obj1.empCheck)
+			empCheck =(int) ((Math.random())*10)%3;
+			switch(empCheck)
 			{
 			case IS_FULL_TIME:
-				obj1.empHrs = 8;
-				obj1.working();
+				empHrs = 8;
+				working();
 				break;
 				
 			case IS_PART_TIME:
-				obj1.empHrs = 4;
-				obj1.working();
+				empHrs = 4;
+				working();
 				break;
 				
 			default:
-				obj1.empHrs=0;
-				obj1.working();
+				empHrs=0;
+				working();
 				break;
 				
 			}
 		}
+	}
+	
+	public static void main(String[] args) 
+	{
+		EmployeeWage obj1=new EmployeeWage();
+		obj1.limitations();
 	}
 }

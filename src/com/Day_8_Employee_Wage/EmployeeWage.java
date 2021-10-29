@@ -5,6 +5,7 @@ public class EmployeeWage
 	public static void main(String[] args) 
 	{
 		int IS_PRESENT = 1;
+		int IS_FULL_TIME = 1;
 		int EMP_RATE_PER_HR = 20;
 		int empHrs = 0;
 		int empCheck = (int)(Math.random()*10)%2;
@@ -12,7 +13,18 @@ public class EmployeeWage
 		if(empCheck == IS_PRESENT)
 		{
 			System.out.println("Employee is Present");
-			empHrs=8;
+			int empCheck1 = (int)(Math.random()*10)%2;
+			System.out.println(+empCheck1);
+			if(empCheck1==IS_FULL_TIME)
+			{
+				System.out.println("Full Time Employee");
+				empHrs=8;
+			}
+			else
+			{
+				System.out.println("Part Time Employee");
+				empHrs=4;
+			}
 		}
 		else
 		{
